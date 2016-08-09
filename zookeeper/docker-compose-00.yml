@@ -4,4 +4,6 @@ zookeeper:
     service: zookeeper
   environment:
     - SERVICE_NAME=zookeeper-00
+    - SERVICE_2888_NAME=zookeeper-00
+    - SERVICE_3888_NAME=zookeeper-00
     - ZK_ID=1

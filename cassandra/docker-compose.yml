@@ -5,6 +5,7 @@ cassandra:
   net: host
   environment:
     - SERVICE_NAME=cassandra
+    - SERVICE_9042_NAME=cassandra
     - CASSANDRA_CLUSTER_NAME=Foxtrot C*
     - CASSANDRA_DC=DC1
     - CASSANDRA_RACK=RACK1
