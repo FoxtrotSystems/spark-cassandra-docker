@@ -3,10 +3,10 @@ FROM foxtrotsystems/ubuntu-base:0.9.18
 RUN apt-get update -y
 
 ENV SCALA_VERSION 2.11
-ENV KAFKA_VERSION 0.9.0.0
+ENV KAFKA_VERSION 0.10.1.0
 ENV KAFKA_HOME /opt/kafka_"${SCALA_VERSION}"-"${KAFKA_VERSION}"
 
-RUN wget -q http://apache.mirrors.spacedump.net/kafka/"${KAFKA_VERSION}"/kafka_"${SCALA_VERSION}"-"${KAFKA_VERSION}".tgz -O /tmp/kafka_"${SCALA_VERSION}"-"${KAFKA_VERSION}".tgz
+RUN wget -q http://supergsego.com/apache/kafka/"${KAFKA_VERSION}"/kafka_"${SCALA_VERSION}"-"${KAFKA_VERSION}".tgz -O /tmp/kafka_"${SCALA_VERSION}"-"${KAFKA_VERSION}".tgz
 RUN tar -xzf /tmp/kafka_"${SCALA_VERSION}"-"${KAFKA_VERSION}".tgz -C /opt
 RUN rm /tmp/kafka_"${SCALA_VERSION}"-"${KAFKA_VERSION}".tgz
 

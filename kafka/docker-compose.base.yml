@@ -1,5 +1,5 @@
 kafka:
-  image: foxtrotsystems/apache-kafka:0.9.0.0
+  image: foxtrotsystems/apache-kafka:0.10.1.0
 #  build: ${PROJECT_ROOT}/spark-cassandra-docker/kafka
   container_name: kafka
   net: host
