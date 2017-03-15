@@ -1,5 +1,5 @@
 cassandra:
-  image: foxtrotsystems/apache-cassandra:3.0.3
+  image: cassandra:3.0.12
   container_name: cassandra
   net: host
   environment:
@@ -47,7 +47,7 @@ consul:
   net: host
   entrypoint: /bin/consul
   command: "agent -server -ui -advertise ${DOCKER_IP} -client ${DOCKER_IP} -bootstrap -data-dir=/data"
-  
+
 earthdb:
   image: foxtrotsystems/postgres:9.5.1
   container_name: earthdb
