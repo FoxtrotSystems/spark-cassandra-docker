@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
-echo "broker id: ${BROKER_ID}"
-#sed -r -i "s/<<<BROKER_ID>>>/${BROKER_ID}/" ${KAFKA_HOME}/config/server.properties
-echo "zk hosts: ${ZK_HOSTS}"
-#sed -r -i "s/<<<ZK_HOSTS>>>/${ZK_HOSTS}/" ${KAFKA_HOME}/config/server.properties
-echo "advertised hosts: ${ADVERTISED_HOST}"
-#sed -r -i "s/<<<ADVERTISED_HOST>>>/${ADVERTISED_HOST}/g" ${KAFKA_HOME}/config/server.properties
+while true; do
+  echo "broker id: ${BROKER_ID}"
+  echo "zk hosts: ${ZK_HOSTS}"
+  echo "advertised hosts: ${ADVERTISED_HOST}"
 
-# Run Kafka
-${KAFKA_HOME}/bin/kafka-server-start.sh ${KAFKA_HOME}/config/server.properties
+  # Run Kafka
+  ${KAFKA_HOME}/bin/kafka-server-start.sh ${KAFKA_HOME}/config/server.properties
+
+  # Sleep 2 seconds then loop to restart kafka if it dies
+  sleep 2
+done
+
