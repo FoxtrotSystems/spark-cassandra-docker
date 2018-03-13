@@ -29,7 +29,7 @@ zookeeper:
   restart: always
 
 kafka:
-  image: wurstmeister/kafka:0.10.1.0
+  image: wurstmeister/kafka:1.0.0
   container_name: kafka
   ports:
     - "9092:9092"
